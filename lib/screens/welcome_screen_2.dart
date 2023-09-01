@@ -7,51 +7,56 @@ class WelcomeScreen2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const SizedBox(
-          height: 60,
-        ),
         RichText(
           textAlign: TextAlign.left,
           softWrap: true,
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'Message\n',
+                text: "Welcome \n",
                 style: kWelcomeFont.copyWith(
-                  color: kYellow,
+                  color: kYellowColor,
                 ),
               ),
               TextSpan(
-                text: 'time ',
-                style: kWelcomeFont.copyWith(
-                  fontWeight: FontWeight.w100,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
+                  text: "to this ",
+                  style: kWelcomeFont.copyWith(
+                    fontWeight: FontWeight.w100,
+                    fontStyle: FontStyle.italic,
+                  )),
               TextSpan(
-                text: 'of your ',
+                text: "Page ",
                 style: kWelcomeFont.copyWith(
                   decoration: TextDecoration.underline,
-                  decorationColor: kYellow,
+                  decorationColor: kYellowColor,
                 ),
               ),
-              TextSpan(text: 'Animals', style: kWelcomeFont),
+              TextSpan(
+                text: "Activities",
+                style: kWelcomeFont,
+              ),
             ],
           ),
         ),
         const SizedBox(height: 30.0),
         const Text(
-          "Amet anim in officia consequat Lorem exercitation Lorem est nisi sunt.",
+          "Consectetur sint ipsum commodo mollit eu \nvelit culpa magna adipisicing amet.",
+          textAlign: TextAlign.left,
           style: TextStyle(
             fontFamily: 'Outfit',
-            fontWeight: FontWeight.w400,
-            color: kSecondaryColor,
+            fontSize: 16.0,
+            color: Color(0xFF8F8F8F),
           ),
         ),
-        const SizedBox(height: 60.0),
-        const Icon(Icons.refresh, size: 250, color: kYellow),
+        const SizedBox(height: 50.0),
+        const Icon(
+          Icons.car_repair,
+          color: kYellowColor,
+          size: 225.0,
+        ),
       ],
     );
   }

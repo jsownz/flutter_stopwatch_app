@@ -7,51 +7,56 @@ class WelcomeScreen3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const SizedBox(
-          height: 60,
-        ),
         RichText(
           textAlign: TextAlign.left,
           softWrap: true,
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'Measure\n',
+                text: "Another \n",
                 style: kWelcomeFont.copyWith(
-                  color: kYellow,
+                  color: kYellowColor,
                 ),
               ),
               TextSpan(
-                text: 'time ',
-                style: kWelcomeFont.copyWith(
-                  fontWeight: FontWeight.w100,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
+                  text: "Screen ",
+                  style: kWelcomeFont.copyWith(
+                    fontWeight: FontWeight.w100,
+                    fontStyle: FontStyle.italic,
+                  )),
               TextSpan(
-                text: 'of your ',
+                text: "For ",
                 style: kWelcomeFont.copyWith(
                   decoration: TextDecoration.underline,
-                  decorationColor: kYellow,
+                  decorationColor: kYellowColor,
                 ),
               ),
-              TextSpan(text: 'Activities', style: kWelcomeFont),
+              TextSpan(
+                text: "Testing",
+                style: kWelcomeFont,
+              ),
             ],
           ),
         ),
         const SizedBox(height: 30.0),
         const Text(
-          "Cupidatat in cupidatat proident aliquip. Exercitation ipsum sit ea incididunt magna dolore occaecat.",
+          "Nulla mollit adipisicing do cillum esse \ndolore amet pariatur.",
+          textAlign: TextAlign.left,
           style: TextStyle(
             fontFamily: 'Outfit',
-            fontWeight: FontWeight.w400,
-            color: kSecondaryColor,
+            fontSize: 16.0,
+            color: Color(0xFF8F8F8F),
           ),
         ),
-        const SizedBox(height: 60.0),
-        const Icon(Icons.fire_truck, size: 250, color: kYellow),
+        const SizedBox(height: 50.0),
+        const Icon(
+          Icons.refresh,
+          color: kYellowColor,
+          size: 225.0,
+        ),
       ],
     );
   }

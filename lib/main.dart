@@ -6,10 +6,7 @@ import 'package:flutter_stopwatch_app/screens/home_screen.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: kMainBackgroundColor,
-      // statusBarIconBrightness: Brightness.light,
-      systemNavigationBarColor: kMainBackgroundColor,
-      // systemNavigationBarIconBrightness: Brightness.light,
+      statusBarColor: kPrimaryBackgroundColor,
     ),
   );
   runApp(const MyApp());
@@ -40,7 +37,9 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(
-            seedColor: kYellow, background: kMainBackgroundColor),
+          seedColor: kYellowColor,
+          background: kPrimaryBackgroundColor,
+        ),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
